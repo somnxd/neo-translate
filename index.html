@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>neo translate.</title>
+
+	<link rel="stylesheet" href="index.css" type="text/css">
+	<script src="index.js" type="text/javascript" defer></script>
+	<script src="language.js" type="text/javascript" defer></script>
+</head>
+
+<body>
+
+	<div class="swap">
+		<img alt="swap" src="icon.swap.svg">
+	</div>
+
+	<div class="left half">
+
+		<div class="header">
+
+				<div class="island language">
+					<div id="from-lang" class="language" onclick="toggleMenu('from')">
+						<img id="from-lang-img" alt="" src="">
+						<span id="from-lang-name"></span>
+						<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12 15L7 10H17L12 15Z"/>
+						</svg>
+					</div>
+
+					<div id="from-menu" class="lang-menu">
+					</div>
+				</div>
+
+				<div class="island">
+					<button type="button" title="record" onclick="toggleMenu('record')"><img alt="record" src="icon.record.svg"></button>
+					<button type="button" title="upload" onclick="toggleMenu('upload')"><img alt="upload" src="icon.upload.svg"></button>
+					<button type="button" title="keyboard" onclick="alert('Keyboard is currently a work in progress.')"><img alt="keyboard" src="icon.keyboard.svg"></button>
+				</div>
+
+				<div id="record-menu">
+					<span>voice recording is currently unavailable</span>
+					<div></div>
+					<button type="button"><img alt="microphone" src="icon.disabledmic.svg"></button>
+				</div>
+
+				<div id="upload-menu">
+					<div>uploading files is currently unavailable</div>
+				</div>
+
+		</div>
+
+		<div class="body" contenteditable="true">
+			Where is the hotel?
+		</div>
+
+	</div>
+
+	<div class="right half">
+
+		<div class="header">
+
+			<div class="island language">
+
+				<div class="language" onclick="toggleMenu('to')">
+					<img id="to-lang-img" alt="" src="">
+					<span id="to-lang-name"></span>
+					<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+						<path d="M12 15L7 10H17L12 15Z"/>
+					</svg>
+				</div>
+
+				<div id="to-menu" class="lang-menu">
+				</div>
+
+			</div>
+
+			<div class="island">
+				<button type="button" title="play sound" onclick="alert('Playing sound is currently a work in progress.')"><img alt="play sound" src="icon.playsound.svg"></button>
+				<button type="button" title="copy" onclick="toggleMenu('copy')"><img alt="copy" src="icon.copy.svg"></button>
+
+				<div id="copy-menu">
+					<div>COPY SCRIPT</div>
+					<div>COPY ROMANIZATION</div>
+				</div>
+			</div>
+
+			<div class="separator"></div>
+
+			<div class="island">
+				<button type="button" title="settings" onclick="toggleMenu('settings')"><img alt="settings" src="icon.settings.svg"></button>
+
+				<div id="settings-menu">
+					<div class="main">
+						<div class="checkbox selected">
+							<div><img alt="check" src="icon.check.svg"></div>
+							HIRAGANA
+						</div>
+						<div class="checkbox selected">
+							<div><img alt="check" src="icon.check.svg"></div>
+							KATAKANA
+						</div>
+						<div class="checkbox">
+							<div><img alt="check" src="icon.check.svg"></div>
+							KANJI
+						</div>
+
+						<div class="title">ROMANIZATION</div>
+
+						<div class="switch">
+							<div><span>HIDE</span></div>
+							<div class="selected"><span>SHOW</span></div>
+							<div><span>ALIGN</span></div>
+						</div>
+
+						<div class="footer"><div onclick="toggleMenu('advanced-settings', true)">SHOW ADVANCED</div></div>
+					</div>
+
+					<div id="advanced-settings-menu" class="advanced">
+						<div class="title">ADVANCED ROMANIZATION</div>
+
+						<div class="toggle">
+							<div class="option selected">o</div>
+							<div class="query">を</div>
+							<div class="option">wo</div>
+						</div>
+						<div class="toggle">
+							<div class="option selected">fu</div>
+							<div class="query">ふ</div>
+							<div class="option">hu</div>
+						</div>
+						<div class="toggle">
+							<div class="option selected">ra</div>
+							<div class="query">ら</div>
+							<div class="option">la</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="body">
+			ホテルはどこですか
+			<span>hoteru wa doko desu ka</span>
+		</div>
+
+	</div>
+
+</body>
+</html>
